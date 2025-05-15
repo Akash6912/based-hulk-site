@@ -296,6 +296,7 @@ h1, h2 {
   text-align: justify;
 }
 
+/* Tokenomics */
 .section.token {
   padding: 60px 20px;
   background: linear-gradient(to right, #0115a9, #4b60fc); /* pink to purple */
@@ -304,11 +305,9 @@ h1, h2 {
 }
 
 .section.token h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 40px;
-  background: linear-gradient(to right, #000000, #1f1f1f);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .token-columns {
@@ -335,7 +334,7 @@ h1, h2 {
 .token-columns h1 {
   margin-bottom: 15px;
   font-size: 1.4rem;
-  color: #fefefe;
+  color: #fff;
 }
 
 .section.token .FEATURES-badge {
@@ -357,6 +356,7 @@ h1, h2 {
   border-bottom: none;
 }
 
+/* Chart */
 #CHART {
   background: linear-gradient(to left, #0115a9, #4b60fc); /* pink to purple */
 }
@@ -365,6 +365,7 @@ h1, h2 {
   padding: 20px 600px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -411,6 +412,7 @@ footer {
   transform: scale(1.15);
 }
 
+/* RoadMap */
 .roadmap-section {
   padding: 60px 20px;
   background: linear-gradient(to right, #0115a9, #4b60fc);;
