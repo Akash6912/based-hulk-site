@@ -112,7 +112,7 @@ h1, h2 {
 
 .buy-btn {
   background-color: #0115a9;
-  color: black;
+  color: #fff;
   padding: 5px 25px;
   border-radius: 25px;
   font-size: 1.3rem;
@@ -164,20 +164,20 @@ h1, h2 {
 
 .text-container {
   max-width: 600px;
-  color: black;
+  color: #fff;
   text-align: center;
 }
 
 .text-container h1 {
   font-size: 1.8rem;
-  color: #000;
+  color: #fff;
   margin-bottom: 15px;
 }
 
 .text-container h2 {
   font-size: 1.2rem;
   margin-bottom: 15px;
-  color: #111;
+  color: #fff;
 }
 
 .contract-address {
@@ -207,12 +207,12 @@ h1, h2 {
 
 .white {
   color: white;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .blue {
   color: #344afb; /* or any other blue */
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 @keyframes ticker-scroll {
@@ -255,6 +255,7 @@ h1, h2 {
   border-radius: 20px;
   display: inline-block;
   margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(251, 1, 163, 0.414);
   font-family: 'Fredoka', sans-serif;
 }
 
@@ -295,14 +296,14 @@ h1, h2 {
   text-align: justify;
 }
 
-.section.roadmap {
+.section.token {
   padding: 60px 20px;
   background: linear-gradient(to right, #0115a9, #4b60fc); /* pink to purple */
   text-align: center;
   color: #fff;
 }
 
-.section.roadmap h2 {
+.section.token h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
   background: linear-gradient(to right, #000000, #1f1f1f);
@@ -310,14 +311,14 @@ h1, h2 {
   -webkit-text-fill-color: transparent;
 }
 
-.roadmap-columns {
+.token-columns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-.roadmap-columns > div {
+.token-columns > div {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
@@ -326,33 +327,33 @@ h1, h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.roadmap-columns > div:hover {
+.token-columns > div:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0, 255, 128, 0.3);
 }
 
-.roadmap-columns h1 {
+.token-columns h1 {
   margin-bottom: 15px;
   font-size: 1.4rem;
   color: #fefefe;
 }
 
-.section.roadmap .FEATURES-badge {
+.section.token .FEATURES-badge {
   padding: 20px 400px;
 }
 
-.roadmap-columns ul {
+.token-columns ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.roadmap-columns ul li {
+.token-columns ul li {
   padding: 10px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.roadmap-columns ul li:last-child {
+.token-columns ul li:last-child {
   border-bottom: none;
 }
 
@@ -361,7 +362,7 @@ h1, h2 {
 }
 
 #CHART .FEATURES-badge {
-  padding: 20px 700px;
+  padding: 20px 600px;
 }
 
 footer {
@@ -410,6 +411,89 @@ footer {
   transform: scale(1.15);
 }
 
+.roadmap-section {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0115a9, #4b60fc);;
+  color: #fff;
+  text-align: center;
+}
+
+.roadmap-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  padding: 20px 400px;
+  color: #fff;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 40px;
+  max-width: 800px;
+  border-left: 3px solid #011082;
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #011082;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.timeline-content {
+  background-color: #011082;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(251, 1, 163, 0.414);
+  text-align: left;
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #031bd5;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-content li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  padding-left: 24px;
+  position: relative;
+}
+
+.timeline-content li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0722f1;
+}
+
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+
+  .timeline-item.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -437,9 +521,13 @@ footer {
     display: block;
   }
 
-   .hero-content {
+  .hero-content {
     flex-direction: column;
     text-align: center;
+  }
+
+  .text-container {
+    max-width: 300px;
   }
 
   .image-container img {
@@ -455,7 +543,7 @@ footer {
   }
 
   .contract-address {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .ticker-inner {
@@ -486,12 +574,24 @@ footer {
     padding: 0;
   }
 
-  .section.roadmap .FEATURES-badge {
+  .section.token .FEATURES-badge {
   padding: 20px 70px;
   }
 
   #CHART .FEATURES-badge {
   padding: 20px 100px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item::before {
+    left: -14px;
+  }
+
+  .roadmap-section h2 {
+    padding: 20px 50px;
   }
 
 }
